@@ -1,0 +1,41 @@
+@startuml
+interface Flyable {
++ void fly()
+}
+
+class Bird {
++ void makeSound()
++ void eat()
++ void fly()
+}
+
+class Cat {
++ void makeSound()
++ void eat()
++ void run()
+}
+
+abstract class Animal {
++ {abstract}void makeSound()
++ {abstract}void eat()
+}
+
+class Dog {
++ void makeSound()
++ void eat()
++ void run()
+}
+
+interface Runnable {
++ void run()
+}
+
+
+
+Flyable <|.. Bird
+Animal <|-- Bird
+Runnable <|.. Cat
+Animal <|-- Cat
+Runnable <|.. Dog
+Animal <|-- Dog
+@enduml
